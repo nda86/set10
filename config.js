@@ -11,7 +11,7 @@ config = {
 	wildcard: "catalog-cards_",
 
 	// soap parameters
-	url_soap: "http://{host}:{port}/SET-ERPIntegration/SET/WSCardsCatalogImport?wsdl"
+	url_soap: "http://192.168.188.164:8090/SET-ERPIntegration/SET/WSCardsCatalogImport?wsdl"
 
 };
 

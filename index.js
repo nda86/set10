@@ -44,6 +44,14 @@ function parse(){
 setInterval(parse, timeout);
 
 
+// var soap = require("soap");
+// var url = config.url_soap;
+// var cards = "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+DQo8Y2FyZHMtY2F0YWxvZz4NCgk8aW50ZXJuYWwtY2FyZCBudW1iZXI9IjE3MTA4NiIgYW1vdW50PSIwLjAiIGV4cGlyYXRpb24tZGF0ZT0iMjA1MC0xMi0wMyINCnN0YXR1cz0iQUNUSVZFIiBkZWxldGVkPSJmYWxzZSIgcGVyY2VudGFnZS1kaXNjb3VudD0iMTcuMTAiLz4NCjwvY2FyZHMtY2F0YWxvZz4="
+// soap.createClient(url, function(err, client){
+// 	client.getCardsCatalog(cards, function(err, result){
+// 		console.log(result);
+// 	})
+// });
 
 
 // fs.createReadStream(tmp_dir + fileName,{
@@ -53,3 +61,5 @@ setInterval(parse, timeout);
 // 	.pipe(replacestream('<Client','<client'))
 // 	.pipe(replacestream('55555','ooooo'))
 // 	.pipe(process.stdout);
+
+
