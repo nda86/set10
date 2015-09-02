@@ -3,10 +3,10 @@ config = {
 	// time of research
 	timeout: 2000,
 	// work pathts
-	source_dir: "c:\\Users\\NDA\\Desktop\\project\\source\\",
-	tmp_dir: "c:\\Users\\NDA\\Desktop\\project\\tmp\\",
-	error_dir: "c:\\Users\\NDA\\Desktop\\project\\error\\",
-	success_dir: "c:\\Users\\NDA\\Desktop\\project\\success\\",
+	source_dir: "d:\\set\\import\\source\\",
+	tmp_dir: "d:\\set\\import\\tmp\\",
+	error_dir: "d:\\set\\import\\error\\",
+	success_dir: "d:\\set\\import\\success\\",
 	// wildcard of fileName
 	wildcard: "catalog-cards_",
 
