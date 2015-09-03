@@ -9,34 +9,85 @@ var tmp_dir = config.tmp_dir;
 var success_dir = config.success_dir;
 var error_dir = config.error_dir;
 var wildcard = config.wildcard;
-// var oldPercent = config.oldPercent;
-// var newPercent = config.newPercent;
 
-function do_import(fileName){
+
+// ws soap modules
+var config = require('./config.js');
+var ws = require('ws.js');
+var Http = ws.Http;
+var cards64;
+
+
+
+function do_import_success(fileName){
 	console.log('Импортирую данные...');
+	// move file to tmp
 	fs.renameSync(source_dir + fileName, tmp_dir + fileName);
+	// open file for edit
 	fs.createReadStream(tmp_dir + fileName,{
 		encode: null
 	})
+	// and editing him
 		.pipe(replacestream('discount-percent','percentage-discount'))
 		.pipe(replacestream('<Client','<client'))
 		.pipe(fs.createWriteStream(success_dir + fileName));
+		// remove file in tmp
 	fs.unlinkSync(tmp_dir + fileName);
 
-	console.log('Успех!!!');
+		// base64encode
+	var file = success_dir + fileName;
+	setTimeout(function(){
+		var cards = fs.readFileSync(file);
+		var cards64 = cards.toString('base64');
+		// console.log('тут должен быть base64' + cards64);	
+		ws_soap(cards64);
+	}, 5000);
+
 
 };
 
-function do_return(){
-	console.log('нету ничего. ожидаю...');
-};
+
+
+// function do_return(){
+// 	console.log('нету ничего. ожидаю...');
+// };
 
 function parse(){
 	glob(source_dir + wildcard + "*.xml", function(err, files){
 		for (var file in files){
 			var fileName = path.basename(files[file]);
-			do_import(fileName);
+			do_import_success(fileName);
 		} 
+	});
+};
+
+function ws_soap (cards64) {
+	// ws soap config 
+// request for import cards
+	var request = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.importing.plugins.cards.ERPIntegration.crystals.ru/">' + 
+	   '<soapenv:Header/>' + 
+	   '<soapenv:Body>' +
+	      '<web:getCardsCatalog>' +
+	         '<cardsCatalogXML>' + cards64 + '</cardsCatalogXML>' +
+	      '</web:getCardsCatalog>' +
+	   '</soapenv:Body>' +
+	'</soapenv:Envelope>';
+
+	var ctx = {
+		request: request,
+		url: config.url_soap,
+		action: 'getCardsCatalog',
+		contentType: 'text/xml'
+	};
+
+
+	var handlers = [new Http()];
+
+
+	// собсно сам импорт по веб сервису
+	ws.send(handlers, ctx, function(ctx){
+		// ctx.response === 'true' ? console.log('Карты успешно добавлены!') : console.log('Ошибка импорта!!!');
+		console.log(ctx.response);
 	});
 };
 
