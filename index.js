@@ -13,9 +13,9 @@
 	var error_dir = config.error_dir;
 	var wildcard_cards = config.wildcard_cards;
 	var wildcard_advs = config.wildcard_advs;
+	var wildcard_goods = config.wildcard_goods;
+	var wildcard_cashiers = config.wildcard_cashiers;
 /*-----  End of base config and modules  ------*/
-
-
 
 
 /*============================================
@@ -30,6 +30,7 @@
 
 
 
+												/*-----  cards  ------*/
 
 /*===============================================
 =            edit and move xml cards            =
@@ -61,8 +62,6 @@ function do_import_cards(fileName){
 };
 
 /*-----  End of edit and move xml cards  ------*/
-
-
 
 
 
@@ -98,10 +97,12 @@ function ws_soap_cards (cards64) {
 	});
 };
 
-/*-----  End of send request to WS SET10  ------*/
+/*-----  End of send request to WS SET10  for cards------*/
 
 
 
+
+												/*-----  adverstising  ------*/
 
 /*=====================================================
 =            edit and move XML advertising            =
@@ -175,11 +176,161 @@ var request_adv = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/s
 
 
 
+
+												/*-----  goods  ------*/
+
+/*=====================================================
+=            edit and move XML goods            =
+=====================================================*/
+
+function do_import_goods(fileName){
+	console.log('Импортирую данные...');
+	// move file to tmp
+	fs.renameSync(source_dir + fileName, tmp_dir + fileName);
+	// open file for edit
+	fs.createReadStream(tmp_dir + fileName,{
+		encode: null
+	})
+	// and editing him
+		// .pipe(replacestream('discount-percent','percentage-discount'))
+		// .pipe(replacestream('<Client','<client'))
+		.pipe(fs.createWriteStream(success_dir + fileName));
+		// remove file in tmp
+	fs.unlinkSync(tmp_dir + fileName);
+
+		// base64encode
+	var file = success_dir + fileName;
+	setTimeout(function(){
+		var goods = fs.readFileSync(file);
+		var goods64 = goods.toString('base64');
+		// console.log('тут должен быть base64' + cards64);	
+		ws_soap_goods(goods64);
+	}, 5000);
+};
+
+/*-----  End of edit and move XML goods  ------*/
+
+
+
+/*================================================================
+=            send request to WS SET10 for goods            =
+================================================================*/
+
+function ws_soap_goods (goods64) {
+	// ws soap config 
+// request for import goods
+var request_goods = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:plug="http://plugins.products.ERPIntegration.crystals.ru/">' +
+   						'<soapenv:Header/>' +
+   						'<soapenv:Body>' +
+						    '<plug:getGoodsCatalog>' +
+					    		'<goodsCatalogXML>' + goods64 + '</goodsCatalogXML>' +
+						    '</plug:getGoodsCatalog>' +
+						'</soapenv:Body>' +
+					'</soapenv:Envelope>';
+
+	var ctx = {
+		request: request_goods,
+		url: config.url_soap_goods,
+		action: 'getGoodsCatalog',
+		contentType: 'text/xml'
+	};
+
+
+	// var Http = ws.Http;
+	var handlers = [new Http()];
+
+
+	// собсно сам импорт по веб сервису
+	ws.send(handlers, ctx, function(ctx){
+		// ctx.response === 'true' ? console.log('Карты успешно добавлены!') : console.log('Ошибка импорта!!!');
+		console.log(ctx.response);
+	});
+};
+
+/*-----  End of send request to WS SET10 for goods  ------*/
+
+
+
+
+// 												/*-----  cashiers  ------*/
+
+// /*=====================================================
+// =            edit and move XML cashiers            =
+// =====================================================*/
+
+// function do_import_cashiers(fileName){
+// 	console.log('Импортирую данные...');
+// 	// move file to tmp
+// 	fs.renameSync(source_dir + fileName, tmp_dir + fileName);
+// 	// open file for edit
+// 	fs.createReadStream(tmp_dir + fileName,{
+// 		encode: null
+// 	})
+// 	// and editing him
+// 		// .pipe(replacestream('discount-percent','percentage-discount'))
+// 		// .pipe(replacestream('<Client','<client'))
+// 		.pipe(fs.createWriteStream(success_dir + fileName));
+// 		// remove file in tmp
+// 	fs.unlinkSync(tmp_dir + fileName);
+
+// 		// base64encode
+// 	var file = success_dir + fileName;
+// 	setTimeout(function(){
+// 		var cashiers = fs.readFileSync(file, 'utf-8');
+// 		var cashiersCDATA = '<![CDATA[ ' + cashiers + ' ]]>';
+// 		console.log('cdata' + cashiersCDATA + '/n');
+// 		ws_soap_cashiers(cashiersCDATA);
+// 	}, 5000);
+// };
+
+// /*-----  End of edit and move XML cashiers  ------*/
+
+
+// ================================================================
+// =            send request to WS SET10 for            =
+// ================================================================
+
+// function ws_soap_cashiers (cashiersCDATA) {
+// 	// ws soap config 
+// // request for import cashiers
+// var request_cashiers = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.cashiers.ERPIntegration.crystals.ru/">' +
+// 					   '<soapenv:Header/>' +
+// 					   '<soapenv:Body>' +
+// 					    	'<ws:importCashiers>' +
+// 						        '<xml>' + cashiersCDATA + '</xml>' +
+// 						    '</ws:importCashiers>' +
+// 						'</soapenv:Body>' +
+// 						'</soapenv:Envelope>';
+
+// 	var ctx = {
+// 		request: request_cashiers,
+// 		url: config.url_soap_cashiers,
+// 		action: 'importCashiers',
+// 		contentType: 'text/xml'
+// 	};
+
+
+// 	// var Http = ws.Http;
+// 	var handlers = [new Http()];
+
+
+// 	// собсно сам импорт по веб сервису
+// 	ws.send(handlers, ctx, function(ctx){
+// 		// ctx.response === 'true' ? console.log('Карты успешно добавлены!') : console.log('Ошибка импорта!!!');
+// 		console.log(ctx);
+// 	});
+// };
+
+// /*-----  End of send request to WS SET10 for cashiers  ------*/
+
+
+
 /*===============================================
 =            watching for source dir            =
 ===============================================*/
 
 function parse(){
+	// watching for cards
 	glob(source_dir + wildcard_cards + "*.xml", function(err, files){
 		for (var file in files){
 			var fileName = path.basename(files[file]);
@@ -187,12 +338,31 @@ function parse(){
 		};
 	});
 
+	// watching for advs
 	glob(source_dir + wildcard_advs + "*.xml", function(err, files){
 		for (var file in files){
 			var fileName = path.basename(files[file]);
 			do_import_advs(fileName);
 		};
 	});
+
+
+	// watching for goods
+	glob(source_dir + wildcard_goods + "*.xml", function(err, files){
+		for (var file in files){
+			var fileName = path.basename(files[file]);
+			do_import_goods(fileName);
+		};
+	});
+
+
+	// // watching for cashiers
+	// glob(source_dir + wildcard_cashiers + "*.xml", function(err, files){
+	// 	for (var file in files){
+	// 		var fileName = path.basename(files[file]);
+	// 		do_import_cashiers(fileName);
+	// 	};
+	// });
 };
 /*-----  End of watching for source dir  ------*/
 

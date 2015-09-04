@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cashUsers>
+<cashUser>
+<tabNum>2</tabNum>
+<firstName>Наталья</firstName>
+<middleName>Васильевна</middleName>
+<lastName>Иванова</lastName>
+<role>Администратор</role>
+<password>8394824</password>
+<barcode>8394824</barcode>
+<Blocked>false</Blocked>
+</cashUser>
+<cashUser>
+<tabNum>384</tabNum>
+<firstName>Ирина</firstName>
+<middleName>Вячеславовна</middleName>
+<lastName>Смирнова</lastName>
+<role>Кассир</role>
+<password>1934</password>
+<barcode>80193864343</barcode>
+<Blocked>false</Blocked>
+</cashUser>
+</cashUsers>
