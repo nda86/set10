@@ -1,2 +1,2 @@
 @echo off
-node d:\set\set_git\set10\index.js > log.txt
+node %~dp0index.js > log.txt
