@@ -14,7 +14,7 @@
 	var wildcard_cards = config.wildcard_cards;
 	var wildcard_advs = config.wildcard_advs;
 	var wildcard_goods = config.wildcard_goods;
-	var wildcard_cashiers = config.wildcard_cashiers;
+	// var wildcard_cashiers = config.wildcard_cashiers;
 /*-----  End of base config and modules  ------*/
 
 
@@ -37,7 +37,7 @@
 ===============================================*/
 
 function do_import_cards(fileName){
-	console.log('Импортирую данные...');
+	// console.log('Импортирую данные...');
 	// move file to tmp
 	fs.renameSync(source_dir + fileName, tmp_dir + fileName);
 	// open file for edit
@@ -93,7 +93,13 @@ function ws_soap_cards (cards64) {
 	// собсно сам импорт по веб сервису
 	ws.send(handlers, ctx, function(ctx){
 		// ctx.response === 'true' ? console.log('Карты успешно добавлены!') : console.log('Ошибка импорта!!!');
-		console.log(ctx.response);
+		// console.log(typeof ctx.response);
+		// console.log(ctx.statusCode);
+
+			console.log((new Date()).toLocaleString());
+			console.log("Дисконтные карты: \n" + ctx.response);
+			console.log("---------------------------------------------\n");
+
 	});
 };
 
@@ -109,7 +115,8 @@ function ws_soap_cards (cards64) {
 =====================================================*/
 
 function do_import_advs(fileName){
-	console.log('Импортирую данные...');
+	// console.log((new Date()).toLocaleString());
+	// console.log('Импортирую данные рекламных акций...');
 	// move file to tmp
 	fs.renameSync(source_dir + fileName, tmp_dir + fileName);
 	// open file for edit
@@ -168,7 +175,10 @@ var request_adv = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/s
 	// собсно сам импорт по веб сервису
 	ws.send(handlers, ctx, function(ctx){
 		// ctx.response === 'true' ? console.log('Карты успешно добавлены!') : console.log('Ошибка импорта!!!');
-		console.log(ctx.response);
+		console.log((new Date()).toLocaleString());
+		console.log("Рекламные акции: \n" + ctx.response);
+		console.log("---------------------------------------------\n");
+
 	});
 };
 
@@ -184,7 +194,8 @@ var request_adv = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/s
 =====================================================*/
 
 function do_import_goods(fileName){
-	console.log('Импортирую данные...');
+	// console.log((new Date()).toLocaleString());
+	// console.log('Импортирую данные товаров...');
 	// move file to tmp
 	fs.renameSync(source_dir + fileName, tmp_dir + fileName);
 	// open file for edit
@@ -243,7 +254,9 @@ var request_goods = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org
 	// собсно сам импорт по веб сервису
 	ws.send(handlers, ctx, function(ctx){
 		// ctx.response === 'true' ? console.log('Карты успешно добавлены!') : console.log('Ошибка импорта!!!');
-		console.log(ctx.response);
+		console.log((new Date()).toLocaleString());
+		console.log("Рекламные акции: \n" + ctx.response);
+		console.log("---------------------------------------------\n");
 	});
 };
 

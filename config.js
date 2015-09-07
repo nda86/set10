@@ -12,13 +12,13 @@ config = {
 	wildcard_cards: "catalog-cards_",
 	wildcard_advs: "advert-act-discs_",
 	wildcard_goods: "catalog-goods_",
-	wildcard_cashiers: "catalog-cashiers_",
+	// wildcard_cashiers: "catalog-cashiers_",
 
 	// soap parameters
 	url_soap_cards: "http://192.168.188.164:8090/SET-ERPIntegration/SET/WSCardsCatalogImport?wsdl",
 	url_soap_advs: "http://192.168.188.164:8090/SET-ERPIntegration/AdvertisingActionsImport?wsdl",
 	url_soap_goods: "http://192.168.188.164:8090/SET-ERPIntegration/SET/WSGoodsCatalogImport?wsdl",
-	url_soap_cashiers: "http://192.168.188.164:8090/SET-ERPIntegration/CashiersImport?wsdl"
+	// url_soap_cashiers: "http://192.168.188.164:8090/SET-ERPIntegration/CashiersImport?wsdl"
 
 };
 
