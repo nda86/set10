@@ -1,0 +1,10 @@
+���2015-09-08 12:15:30
+Дисконтные карты: 
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getCardsCatalogResponse xmlns:ns2="http://webservice.importing.plugins.cards.ERPIntegration.crystals.ru/"><return>false</return></ns2:getCardsCatalogResponse></soap:Body></soap:Envelope>
+---------------------------------------------
+
+2015-09-08 12:16:01
+Дисконтные карты: 
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getCardsCatalogResponse xmlns:ns2="http://webservice.importing.plugins.cards.ERPIntegration.crystals.ru/"><return>false</return></ns2:getCardsCatalogResponse></soap:Body></soap:Envelope>
+---------------------------------------------
+

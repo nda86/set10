@@ -346,7 +346,7 @@ var request_goods = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org
 function parse(){
 	// watching for cards
 	var deployed = fs.existsSync(set10_deployed);
-	if !deployed return;
+	if (deployed === false) return;
 	glob(source_dir + wildcard_cards + "*.xml", function(err, files){
 		for (var file in files){
 			var fileName = path.basename(files[file]);
