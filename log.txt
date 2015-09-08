@@ -18,3 +18,13 @@
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getCardsCatalogResponse xmlns:ns2="http://webservice.importing.plugins.cards.ERPIntegration.crystals.ru/"><return>true</return></ns2:getCardsCatalogResponse></soap:Body></soap:Envelope>
 ---------------------------------------------
 
+2015-09-08 15:05:43
+Дисконтные карты: 
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getCardsCatalogResponse xmlns:ns2="http://webservice.importing.plugins.cards.ERPIntegration.crystals.ru/"><return>true</return></ns2:getCardsCatalogResponse></soap:Body></soap:Envelope>
+---------------------------------------------
+
+2015-09-08 17:30:54
+Рекламные акции: 
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getGoodsCatalogResponse xmlns:ns2="http://plugins.products.ERPIntegration.crystals.ru/"><return>true</return></ns2:getGoodsCatalogResponse></soap:Body></soap:Envelope>
+---------------------------------------------
+
