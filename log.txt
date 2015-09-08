@@ -28,3 +28,18 @@
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getGoodsCatalogResponse xmlns:ns2="http://plugins.products.ERPIntegration.crystals.ru/"><return>true</return></ns2:getGoodsCatalogResponse></soap:Body></soap:Envelope>
 ---------------------------------------------
 
+2015-09-08 17:55:52
+Goods: 
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getGoodsCatalogResponse xmlns:ns2="http://plugins.products.ERPIntegration.crystals.ru/"><return>false</return></ns2:getGoodsCatalogResponse></soap:Body></soap:Envelope>
+---------------------------------------------
+
+2015-09-08 17:58:27
+Goods: 
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getGoodsCatalogResponse xmlns:ns2="http://plugins.products.ERPIntegration.crystals.ru/"><return>false</return></ns2:getGoodsCatalogResponse></soap:Body></soap:Envelope>
+---------------------------------------------
+
+2015-09-08 17:59:34
+Goods: 
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getGoodsCatalogResponse xmlns:ns2="http://plugins.products.ERPIntegration.crystals.ru/"><return>true</return></ns2:getGoodsCatalogResponse></soap:Body></soap:Envelope>
+---------------------------------------------
+

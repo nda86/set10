@@ -205,7 +205,7 @@ function do_import_goods(fileName){
 	})
 	// and editing him
 		// .pipe(replacestream('discount-percent','percentage-discount'))
-		// .pipe(replacestream('<Client','<client'))
+		.pipe(replacestream('type="MAX_DISCOUNT_PERCENT" value="100.00"','type="MAX_DISCOUNT_PERCENT" value="0.0"'))
 		.pipe(fs.createWriteStream(success_dir + fileName));
 		// remove file in tmp
 	fs.unlinkSync(tmp_dir + fileName);
