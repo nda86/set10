@@ -98,7 +98,7 @@ function ws_soap_cards (cards64) {
 		// console.log(ctx.statusCode);
 
 			console.log((new Date()).toLocaleString());
-			console.log("Дисконтные карты: \n" + ctx.response);
+			console.log("Cards: \n" + ctx.response);
 			console.log("---------------------------------------------\n");
 
 	});
@@ -177,7 +177,7 @@ var request_adv = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/s
 	ws.send(handlers, ctx, function(ctx){
 		// ctx.response === 'true' ? console.log('Карты успешно добавлены!') : console.log('Ошибка импорта!!!');
 		console.log((new Date()).toLocaleString());
-		console.log("Рекламные акции: \n" + ctx.response);
+		console.log("Advertisings: \n" + ctx.response);
 		console.log("---------------------------------------------\n");
 
 	});
@@ -256,7 +256,7 @@ var request_goods = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org
 	ws.send(handlers, ctx, function(ctx){
 		// ctx.response === 'true' ? console.log('Карты успешно добавлены!') : console.log('Ошибка импорта!!!');
 		console.log((new Date()).toLocaleString());
-		console.log("Рекламные акции: \n" + ctx.response);
+		console.log("Goods: \n" + ctx.response);
 		console.log("---------------------------------------------\n");
 	});
 };
