@@ -2,6 +2,8 @@ var config;
 config = {
 	// time of research
 	timeout: 2000,
+	// dir for set10
+	set10_deployed: "c:\\Program Files (x86)\\SetRetail10\\standalone\\deployments\\Set10.ear.deployed",
 	// work pathts
 	source_dir: "d:\\set\\import\\source\\",
 	tmp_dir: "d:\\set\\import\\tmp\\",

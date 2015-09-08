@@ -14,6 +14,7 @@
 	var wildcard_cards = config.wildcard_cards;
 	var wildcard_advs = config.wildcard_advs;
 	var wildcard_goods = config.wildcard_goods;
+	var set10_deployed = config.set10_deployed;
 	// var wildcard_cashiers = config.wildcard_cashiers;
 /*-----  End of base config and modules  ------*/
 
@@ -344,6 +345,8 @@ var request_goods = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org
 
 function parse(){
 	// watching for cards
+	var deployed = fs.existsSync(set10_deployed);
+	if !deployed return;
 	glob(source_dir + wildcard_cards + "*.xml", function(err, files){
 		for (var file in files){
 			var fileName = path.basename(files[file]);
