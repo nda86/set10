@@ -10,21 +10,23 @@ pg.connect(conString, function(err, client, done){
 			client.end();
 			return;
 		} 
-		prompt.start();
-		console.log("Вы уверены что хотите удалить," + result.rows.length + " записей? [yes/no]");
-		prompt.get(['x'], function(err, result){
-			if (result.x === 'yes'){
+		// client.end();
+		// prompt.start();
+		// console.log("Вы уверены что хотите удалить," + result.rows.length + " записей? [yes/no]");
+		// prompt.get(['x'], function(err, result){
+			// if (result.x === 'yes'){
 				console.log('Удаляем ВСЕ записи...');
 				client.query('DELETE FROM public.un_cg_max_discount_percent_restrictions', function(err, result){
 					if (err) return console.error('error running query', err);
 					console.log('Все записи успешно удалены');
+					client.end();
 				});
-			}else {
-				console.log('Отмена удаления');
-				return;
-			}
-		})
-	client.end();
+			// }else {
+				// console.log('Отмена удаления');
+				// client.end();
+				// return;
+			// }
+		// })
 	});
 });
 
