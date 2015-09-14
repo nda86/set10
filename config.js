@@ -5,10 +5,10 @@ config = {
 	// dir for set10
 	set10_deployed: "c:\\Program Files (x86)\\SetRetail10\\standalone\\deployments\\Set10.ear.deployed",
 	// work pathts
-	source_dir: "d:\\set\\import\\source\\",
-	tmp_dir: "d:\\set\\import\\tmp\\",
-	error_dir: "d:\\set\\import\\error\\",
-	success_dir: "d:\\set\\import\\success\\",
+	source_dir: "c:\\set10_xml\\source\\",
+	tmp_dir: "c:\\set10_xml\\tmp\\",
+	error_dir: "c:\\set10_xml\\error\\",
+	success_dir: "c:\\set10_xml\\success\\",
 
 	// wildcard of fileName
 	wildcard_cards: "catalog-cards_",
@@ -17,10 +17,10 @@ config = {
 	// wildcard_cashiers: "catalog-cashiers_",
 
 	// soap parameters
-	url_soap_cards: "http://192.168.188.164:8090/SET-ERPIntegration/SET/WSCardsCatalogImport?wsdl",
-	url_soap_advs: "http://192.168.188.164:8090/SET-ERPIntegration/AdvertisingActionsImport?wsdl",
-	url_soap_goods: "http://192.168.188.164:8090/SET-ERPIntegration/SET/WSGoodsCatalogImport?wsdl",
-	// url_soap_cashiers: "http://192.168.188.164:8090/SET-ERPIntegration/CashiersImport?wsdl"
+	url_soap_cards: "http://localhost:8090/SET-ERPIntegration/SET/WSCardsCatalogImport?wsdl",
+	url_soap_advs: "http://localhost:8090/SET-ERPIntegration/AdvertisingActionsImport?wsdl",
+	url_soap_goods: "http://localhost:8090/SET-ERPIntegration/SET/WSGoodsCatalogImport?wsdl",
+	// url_soap_cashiers: "http://localhost:8090/SET-ERPIntegration/CashiersImport?wsdl"
 
 };
 
