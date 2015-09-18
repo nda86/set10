@@ -1,0 +1,19 @@
+warn:    --minUptime not set. Defaulting to: 1000ms
+warn:    --spinSleepTime not set. Your script will exit if it does not stay up for at least 1000ms
+2015-09-18 12:01:30
+Cards: 
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getCardsCatalogResponse xmlns:ns2="http://webservice.importing.plugins.cards.ERPIntegration.crystals.ru/"><return>true</return></ns2:getCardsCatalogResponse></soap:Body></soap:Envelope>
+---------------------------------------------
+
+2015-09-18 12:02:05
+Cards: 
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getCardsCatalogResponse xmlns:ns2="http://webservice.importing.plugins.cards.ERPIntegration.crystals.ru/"><return>true</return></ns2:getCardsCatalogResponse></soap:Body></soap:Envelope>
+---------------------------------------------
+
+warn:    --minUptime not set. Defaulting to: 1000ms
+warn:    --spinSleepTime not set. Your script will exit if it does not stay up for at least 1000ms
+2015-09-18 12:06:27
+Cards: 
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getCardsCatalogResponse xmlns:ns2="http://webservice.importing.plugins.cards.ERPIntegration.crystals.ru/"><return>true</return></ns2:getCardsCatalogResponse></soap:Body></soap:Envelope>
+---------------------------------------------
+
