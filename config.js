@@ -10,6 +10,9 @@ config = {
 	error_dir: "c:\\set10_xml\\error\\",
 	success_dir: "c:\\set10_xml\\success\\",
 
+
+	// smarket xml folder
+	smarket_xml: "\\\\192.168.0.76\\Kassa200",
 	// wildcard of fileName
 	wildcard_cards: "catalog-cards_",
 	wildcard_advs: "advert-act-discs_",
