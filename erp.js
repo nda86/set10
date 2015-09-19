@@ -382,7 +382,7 @@ function parse(){
 };
 /*-----  End of watching for source dir  ------*/
 
-
+console.log('Start ERP...');
 setInterval(parse, timeout);
 
 
