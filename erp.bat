@@ -1,2 +1,2 @@
 @echo off
-forever erp.js >> log.txt
+forever erp.js
