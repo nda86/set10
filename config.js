@@ -12,7 +12,7 @@ config = {
 
 
 	// smarket xml folder
-	smarket_xml: "\\\\192.168.0.76\\Kassa200",
+	smarket_xml: "c:\\\\set10_xml\\load\\",
 	// wildcard of fileName
 	wildcard_cards: "catalog-cards_",
 	wildcard_advs: "advert-act-discs_",
