@@ -1,98 +1,22 @@
 warn:    --minUptime not set. Defaulting to: 1000ms
 warn:    --spinSleepTime not set. Your script will exit if it does not stay up for at least 1000ms
-2015-09-18 12:01:30
+2015-10-20 18:10:06
 Cards: 
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getCardsCatalogResponse xmlns:ns2="http://webservice.importing.plugins.cards.ERPIntegration.crystals.ru/"><return>true</return></ns2:getCardsCatalogResponse></soap:Body></soap:Envelope>
 ---------------------------------------------
 
-2015-09-18 12:02:05
-Cards: 
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getCardsCatalogResponse xmlns:ns2="http://webservice.importing.plugins.cards.ERPIntegration.crystals.ru/"><return>true</return></ns2:getCardsCatalogResponse></soap:Body></soap:Envelope>
+2015-10-20 18:12:14
+Goods: 
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getGoodsCatalogResponse xmlns:ns2="http://plugins.products.ERPIntegration.crystals.ru/"><return>true</return></ns2:getGoodsCatalogResponse></soap:Body></soap:Envelope>
 ---------------------------------------------
 
 warn:    --minUptime not set. Defaulting to: 1000ms
 warn:    --spinSleepTime not set. Your script will exit if it does not stay up for at least 1000ms
-2015-09-18 12:06:27
+
+121warn:    --minUptime not set. Defaulting to: 1000ms
+warn:    --spinSleepTime not set. Your script will exit if it does not stay up for at least 1000ms
+2015-10-21 07:58:57
 Cards: 
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getCardsCatalogResponse xmlns:ns2="http://webservice.importing.plugins.cards.ERPIntegration.crystals.ru/"><return>true</return></ns2:getCardsCatalogResponse></soap:Body></soap:Envelope>
 ---------------------------------------------
 
-warn:    --minUptime not set. Defaulting to: 1000ms
-warn:    --spinSleepTime not set. Your script will exit if it does not stay up for at least 1000ms
-2015-09-19 02:14:07
-Goods: 
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getGoodsCatalogResponse xmlns:ns2="http://plugins.products.ERPIntegration.crystals.ru/"><return>true</return></ns2:getGoodsCatalogResponse></soap:Body></soap:Envelope>
----------------------------------------------
-
-2015-09-19 02:14:07
-Goods: 
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getGoodsCatalogResponse xmlns:ns2="http://plugins.products.ERPIntegration.crystals.ru/"><return>true</return></ns2:getGoodsCatalogResponse></soap:Body></soap:Envelope>
----------------------------------------------
-
-2015-09-19 02:14:07
-Goods: 
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getGoodsCatalogResponse xmlns:ns2="http://plugins.products.ERPIntegration.crystals.ru/"><return>true</return></ns2:getGoodsCatalogResponse></soap:Body></soap:Envelope>
----------------------------------------------
-
-2015-09-19 02:14:08
-Goods: 
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getGoodsCatalogResponse xmlns:ns2="http://plugins.products.ERPIntegration.crystals.ru/"><return>true</return></ns2:getGoodsCatalogResponse></soap:Body></soap:Envelope>
----------------------------------------------
-
-2015-09-19 02:14:08
-Goods: 
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getGoodsCatalogResponse xmlns:ns2="http://plugins.products.ERPIntegration.crystals.ru/"><return>true</return></ns2:getGoodsCatalogResponse></soap:Body></soap:Envelope>
----------------------------------------------
-
-2015-09-19 02:14:08
-Goods: 
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getGoodsCatalogResponse xmlns:ns2="http://plugins.products.ERPIntegration.crystals.ru/"><return>true</return></ns2:getGoodsCatalogResponse></soap:Body></soap:Envelope>
----------------------------------------------
-
-2015-09-19 02:14:08
-Goods: 
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getGoodsCatalogResponse xmlns:ns2="http://plugins.products.ERPIntegration.crystals.ru/"><return>true</return></ns2:getGoodsCatalogResponse></soap:Body></soap:Envelope>
----------------------------------------------
-
-2015-09-19 02:14:08
-Goods: 
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getGoodsCatalogResponse xmlns:ns2="http://plugins.products.ERPIntegration.crystals.ru/"><return>true</return></ns2:getGoodsCatalogResponse></soap:Body></soap:Envelope>
----------------------------------------------
-
-2015-09-19 02:14:09
-Goods: 
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getGoodsCatalogResponse xmlns:ns2="http://plugins.products.ERPIntegration.crystals.ru/"><return>true</return></ns2:getGoodsCatalogResponse></soap:Body></soap:Envelope>
----------------------------------------------
-
-2015-09-19 02:14:09
-Goods: 
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getGoodsCatalogResponse xmlns:ns2="http://plugins.products.ERPIntegration.crystals.ru/"><return>true</return></ns2:getGoodsCatalogResponse></soap:Body></soap:Envelope>
----------------------------------------------
-
-2015-09-19 02:14:09
-Goods: 
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getGoodsCatalogResponse xmlns:ns2="http://plugins.products.ERPIntegration.crystals.ru/"><return>true</return></ns2:getGoodsCatalogResponse></soap:Body></soap:Envelope>
----------------------------------------------
-
-2015-09-19 02:14:09
-Goods: 
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getGoodsCatalogResponse xmlns:ns2="http://plugins.products.ERPIntegration.crystals.ru/"><return>true</return></ns2:getGoodsCatalogResponse></soap:Body></soap:Envelope>
----------------------------------------------
-
-2015-09-19 02:14:09
-Goods: 
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getGoodsCatalogResponse xmlns:ns2="http://plugins.products.ERPIntegration.crystals.ru/"><return>true</return></ns2:getGoodsCatalogResponse></soap:Body></soap:Envelope>
----------------------------------------------
-
-2015-09-19 02:14:10
-Goods: 
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getGoodsCatalogResponse xmlns:ns2="http://plugins.products.ERPIntegration.crystals.ru/"><return>true</return></ns2:getGoodsCatalogResponse></soap:Body></soap:Envelope>
----------------------------------------------
-
-2015-09-19 02:14:31
-Cards: 
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"><soap:Body><ns2:getCardsCatalogResponse xmlns:ns2="http://webservice.importing.plugins.cards.ERPIntegration.crystals.ru/"><return>true</return></ns2:getCardsCatalogResponse></soap:Body></soap:Envelope>
----------------------------------------------
-
-warn:    --minUptime not set. Defaulting to: 1000ms
-warn:    --spinSleepTime not set. Your script will exit if it does not stay up for at least 1000ms

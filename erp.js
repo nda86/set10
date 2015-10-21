@@ -355,12 +355,12 @@ function parse(){
 	});
 
 	// watching for advs
-	glob(source_dir + wildcard_advs + "*.xml", function(err, files){
-		for (var file in files){
-			var fileName = path.basename(files[file]);
-			do_import_advs(fileName);
-		};
-	});
+	// glob(source_dir + wildcard_advs + "*.xml", function(err, files){
+	// 	for (var file in files){
+	// 		var fileName = path.basename(files[file]);
+	// 		do_import_advs(fileName);
+	// 	};
+	// });
 
 
 	// watching for goods
